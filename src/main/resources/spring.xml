@@ -48,6 +48,7 @@
     <bean id="globalConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig">
         <property name="dbConfig" ref="dbConfig"></property>
         <property name="metaObjectHandler" ref="myMetaObjectHandler"/>
+<!--        <property name="sqlInjector" ref="myInject"></property>-->
     </bean>
     <bean id="dbConfig" class="com.baomidou.mybatisplus.core.config.GlobalConfig.DbConfig">
         <property name="idType" ref="idType"></property>
@@ -55,4 +56,5 @@
     </bean>
     <util:constant id="idType" static-field="com.baomidou.mybatisplus.annotation.IdType.AUTO"></util:constant>
     <bean id="myMetaObjectHandler" class="com.xt.fill.MyMetaObjectHandler"/>
+    <bean id="myInject" class="com.xt.inject.MyInjector"/>
 </beans>
